@@ -14,7 +14,7 @@
 			<description>
 			Vaadin application class to start</description>
 			<param-name>application</param-name>
-			<param-value>com.example.tddwithvaadin.TddwithvaadinApplication</param-value>
+			<param-value>com.tddwithvaadin.addressbook.AddressBook</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>

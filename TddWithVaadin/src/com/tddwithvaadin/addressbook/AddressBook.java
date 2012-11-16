@@ -1,9 +1,9 @@
-package com.example.tddwithvaadin;
+package com.tddwithvaadin.addressbook;
 
 import com.vaadin.Application;
 import com.vaadin.ui.*;
 
-public class TddwithvaadinApplication extends Application {
+public class AddressBook extends Application {
 	@Override
 	public void init() {
 		Window mainWindow = new Window("Tddwithvaadin Application");
@@ -11,5 +11,4 @@ public class TddwithvaadinApplication extends Application {
 		mainWindow.addComponent(label);
 		setMainWindow(mainWindow);
 	}
-
 }
