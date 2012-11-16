@@ -4,11 +4,12 @@ import com.vaadin.Application;
 import com.vaadin.ui.*;
 
 public class AddressBook extends Application {
+	
+	private WindowFactory windowFactory;
+	
 	@Override
 	public void init() {
-		Window mainWindow = new Window("Tddwithvaadin Application");
-		Label label = new Label("Hello Vaadin user");
-		mainWindow.addComponent(label);
+		Window mainWindow = windowFactory.createMainWindow("Address Book Demo Application");
 		setMainWindow(mainWindow);
 	}
 }
