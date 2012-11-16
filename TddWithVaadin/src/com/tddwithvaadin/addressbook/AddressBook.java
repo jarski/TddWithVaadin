@@ -9,7 +9,11 @@ public class AddressBook extends Application {
 	
 	@Override
 	public void init() {
-		Window mainWindow = windowFactory.createWindowWithCaption("Address Book Demo Application");
-		setMainWindow(mainWindow);
+		setMainWindow(createMainWindow());
+		setTheme("Runo");
+	}
+
+	private Window createMainWindow() {
+		return windowFactory.createWindowWithCaption("Address Book Demo Application");
 	}
 }

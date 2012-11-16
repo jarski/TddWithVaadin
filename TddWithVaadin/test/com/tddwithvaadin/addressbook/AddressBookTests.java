@@ -40,4 +40,10 @@ public class AddressBookTests {
 		sut.init();
 		assertSame(expectedMainWindow, sut.getMainWindow());
 	}
+	
+	@Test
+	public void applicationShouldUseRunoTheme() {
+		sut.init();
+		assertEquals("Runo", sut.getTheme());
+	}
 }
