@@ -6,6 +6,7 @@ import com.vaadin.ui.*;
 public class AddressBook extends Application {
 	
 	private WindowFactory windowFactory = new WindowFactory();
+	private LayoutFactory layoutFactory = new LayoutFactory();
 	
 	@Override
 	public void init() {
@@ -14,6 +15,8 @@ public class AddressBook extends Application {
 	}
 
 	private Window createMainWindow() {
-		return windowFactory.createWindowWithCaption("Address Book Demo Application");
+		Window window = windowFactory.createWindowWithCaption("Address Book Demo Application");
+		window.setContent(layoutFactory.createMainLayout());
+		return window;
 	}
 }
