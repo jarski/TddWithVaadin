@@ -5,11 +5,11 @@ import com.vaadin.ui.*;
 
 public class AddressBook extends Application {
 	
-	private WindowFactory windowFactory;
+	private WindowFactory windowFactory = new WindowFactory();
 	
 	@Override
 	public void init() {
-		Window mainWindow = windowFactory.createMainWindow("Address Book Demo Application");
+		Window mainWindow = windowFactory.createWindowWithCaption("Address Book Demo Application");
 		setMainWindow(mainWindow);
 	}
 }

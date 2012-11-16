@@ -30,13 +30,13 @@ public class AddressBookTests {
 	@Test
 	public void mainWindowShouldBeCreatedWithName() {
 		sut.init();
-		verify(windowFactory).createMainWindow("Address Book Demo Application");
+		verify(windowFactory).createWindowWithCaption("Address Book Demo Application");
 	}
 	
 	@Test
 	public void mainWindowShouldBeCreatedInInitialization() {
 		Window expectedMainWindow = mock(Window.class);
-		when(windowFactory.createMainWindow(anyString())).thenReturn(expectedMainWindow);
+		when(windowFactory.createWindowWithCaption(anyString())).thenReturn(expectedMainWindow);
 		sut.init();
 		assertSame(expectedMainWindow, sut.getMainWindow());
 	}
