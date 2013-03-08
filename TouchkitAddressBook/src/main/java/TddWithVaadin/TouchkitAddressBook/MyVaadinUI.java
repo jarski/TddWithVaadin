@@ -3,6 +3,7 @@ package TddWithVaadin.TouchkitAddressBook;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
+import com.vaadin.ui.AbstractOrderedLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
@@ -13,10 +14,11 @@ import com.vaadin.ui.VerticalLayout;
 @SuppressWarnings("serial")
 public class MyVaadinUI extends UI
 {
-
+	private LayoutFactory layoutFactory = new LayoutFactory();
+	
     @Override
     protected void init(VaadinRequest request) {
-        final VerticalLayout layout = new VerticalLayout();
+        final AbstractOrderedLayout layout = layoutFactory.createMainLayout();
         layout.setMargin(true);
         setContent(layout);
         
@@ -30,3 +32,5 @@ public class MyVaadinUI extends UI
     }
 
 }
+
+
